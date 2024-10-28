@@ -1,0 +1,51 @@
+#txtKeywords {
+	width: 180px;
+	height: 33px;
+}
+
+.shaixuan {
+	margin-left: -16px;
+}
+
+.meiye {
+	margin-right: -5px;
+	padding-left: 10px;
+}
+
+#txtPageSize {
+	width: 50px;
+	height: 34px;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+	margin-left: 10px;
+}
+
+.shezhi {
+	height: 33px;
+	font-size: 13px;
+	border: 0;
+	background-color: #F2F6F8;
+}
+
+#currentPageNum {
+	text-align: center;
+	line-height: 21px;
+	margin-left: -6px;
+	margin-right: -6px;
+}
+
+#btnGo {
+	text-align: center;
+	font-size: 15px;
+	line-height: 25px;
+	width: 50px;
+	height: 27px;
+}
+
+.hidden {
+	display: none;
+}
+.validate{
+	color:red;
+}

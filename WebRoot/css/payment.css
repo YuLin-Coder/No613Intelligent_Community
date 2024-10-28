@@ -1,0 +1,83 @@
+.clear {
+	clear: both;
+}
+
+.title {
+	text-align: center;
+	font-size: 28px;
+	color: gray;
+}
+
+.rightinfo {
+	border: solid #A9A9A9 1px;
+	height: 78%;
+	margin: 15px 15px;
+}
+
+.jiaofei {
+	margin-left: 10px;
+	margin-top: 10px;
+	font-size: 20px;
+}
+
+.one {
+	margin-top: 10px;
+	margin-left: 10px;
+	font-size: 15px;
+	float: left;
+	width: 360px;
+}
+
+.two {
+	margin-top: 10px;
+	margin-left: 120px;
+	font-size: 15px;
+	float: left;
+}
+
+.three {
+	margin-top: 10px;
+	margin-left: 120px;
+	font-size: 15px;
+	float: left;
+}
+
+.zhuhu {
+	margin-left: 10px;
+	margin-top: 70px;
+	font-size: 20px;
+}
+
+.four {
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 15px;
+	float: left;
+}
+
+.five {
+	margin-top: 10px;
+	margin-left: 120px;
+	font-size: 15px;
+	float: left;
+}
+
+#btnCalculation {
+	width: 70px;
+	height: 30px;
+	font-size: 15px;
+	margin-left: 275px;
+	margin-top: 10px;
+}
+
+.bottom {
+	font-size: 15px;
+	text-align: center;
+	line-height: 50px;
+}
+
+.btnSubmit {
+	width: 70px;
+	height: 30px;
+}

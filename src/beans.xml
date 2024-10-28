@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+ 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd 
+ 	http://www.springframework.org/schema/context
+ 	http://www.springframework.org/schema/context/spring-context-2.5.xsd
+ 	http://www.springframework.org/schema/aop 
+ 	http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+ 	http://www.springframework.org/schema/tx
+ 	http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!--开启注解处理器 -->
+	<context:annotation-config></context:annotation-config>
+
+	<!--开启组件自动扫描，扫描路径由base-package指定 -->
+	<context:component-scan base-package="com.jypc."></context:component-scan>
+
+	<!--开启基于@AspectJ切面的注解处理器 -->
+	<!--<aop:aspectj-autoproxy></aop:aspectj-autoproxy> -->
+
+	<!--配置数据源 -->
+	<bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<!-- setDriverClassName(String)方法调用的结果 -->
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/Community_Manager?useUnicode=true&amp;characterEncoding=utf-8" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
+
+	<!--配置SessionFactory -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="myDataSource"></property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+			</props>
+		</property>
+		<property name="packagesToScan">
+			<list>
+				<value>com.jypc.bean</value>
+			</list>
+		</property>
+	</bean>
+
+	<!--配置hibernate模板 -->
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<!--配置hibernate的事务管理器 -->
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<tx:annotation-driven transaction-manager="txManager" />
+</beans>  

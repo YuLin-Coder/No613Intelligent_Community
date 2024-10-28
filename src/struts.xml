@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>      
+<!DOCTYPE struts PUBLIC  
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="true" />
+
+	<package name="admin" namespace="/admin" extends="struts-default">
+
+		<action name="costList" class="com.jypc.action.CostAction">
+			<result name="success">costList.jsp</result>
+			<result name="departmentAdd">departmentAdd.jsp</result>
+			<result name="departmentEdit">departmentEdit.jsp</result>
+		</action>
+
+		<action name="paymentList" class="com.jypc.action.PaymentAction">
+			<result name="success">paymentList.jsp</result>
+			<result name="paymentAdd">paymentAdd.jsp</result>
+		</action>
+
+		<action name="paymentNoFixedList" class="com.jypc.action.PaymentNoFixedAction">
+			<result name="success">paymentList_NoFixed.jsp</result>
+			<result name="paymentAdd_NoFixed">paymentAdd_NoFixed.jsp</result>
+		</action>
+
+		<action name="parkkingMoneyList" class="com.jypc.action.ParkkingMoneyAction">
+			<result name="success">parkkingMoneyList.jsp</result>
+			<result name="parkkingMoneyAdd">parkkingMoneyAdd.jsp</result>
+		</action>
+
+		<action name="completeCostList" class="com.jypc.action.CompleteCostAction">
+			<result name="success">completeCostList.jsp</result>
+			<result name="parkkingMoneyAdd">parkkingMoneyAdd.jsp</result>
+		</action>
+
+		<!-- 快递公司信息 -->
+		<action name="deliveryFirmList" class="com.jypc.action.DeliveryFirmAction">
+			<result name="success">deliveryFirmList.jsp</result>
+		</action>
+
+		<!-- 快递收入信息 -->
+		<action name="deliveryMoneyList" class="com.jypc.action.DeliveryMoneyAction">
+			<result name="success">deliveryMoneyList.jsp</result>
+		</action>
+
+		<!-- 快递信息 -->
+		<action name="deliveryInfoList" class="com.jypc.action.DeliveryInfoAction">
+			<result name="success">deliveryInfoList.jsp</result>
+		</action>
+
+		<action name="reportList" class="com.jypc.action.ReportAction">
+			<result name="success">reportList.jsp</result>
+		</action>
+		<action name="repairList" class="com.jypc.action.RepairAction">
+			<result name="success">repairList.jsp</result>
+		</action>
+		<action name="serviceList" class="com.jypc.action.ServiceAction">
+			<result name="success">service.jsp</result>
+		</action>
+
+		<action name="cardList" class="com.jypc.action.CardAction">
+			<result name="success">cardList.jsp</result>
+		</action>
+		<action name="parkkingList" class="com.jypc.action.ParkkingAction">
+			<result name="success">parkkingList.jsp</result>
+			<result name="parkRentList">parkRentList.jsp</result>
+		</action>
+
+		<action name="villageInfoList" class="com.jypc.action.VillageInfoAction">
+			<result name="success">villageInfoList.jsp</result>
+			<result name="departmentAdd">departmentAdd.jsp</result>
+			<result name="departmentEdit">departmentEdit.jsp</result>
+		</action>
+
+		<action name="communityInfoList" class="com.jypc.action.CommunityInfoAction">
+			<result name="success">communityInfoList.jsp</result>
+			<result name="departmentAdd">departmentAdd.jsp</result>
+			<result name="departmentEdit">departmentEdit.jsp</result>
+		</action>
+
+		<action name="userList" class="com.jypc.action.UserAction">
+			<result name="success">userList.jsp</result>
+			<result name="departmentAdd">departmentAdd.jsp</result>
+			<result name="departmentEdit">departmentEdit.jsp</result>
+		</action>
+
+		<action name="assetInfoList" class="com.jypc.action.AssetInfoAction">
+			<result name="success">assetInfoList.jsp</result>
+			<result name="departmentAdd">departmentAdd.jsp</result>
+			<result name="departmentEdit">departmentEdit.jsp</result>
+		</action>
+		<action name="assetTypeList" class="com.jypc.action.AssetTypeAction">
+			<result name="success">assetTypeList.jsp</result>
+			<result name="departmentAdd">departmentAdd.jsp</result>
+			<result name="departmentEdit">departmentEdit.jsp</result>
+		</action>
+
+		<action name="buildingList" class="com.jypc.action.BuildingAction">
+			<result name="success">buildingList.jsp</result>
+		</action>
+
+		<action name="workerList" class="com.jypc.action.WorkerAction">
+			<result name="success">workerList.jsp</result>
+		</action>
+
+		<action name="dutyList" class="com.jypc.action.DutyAction">
+			<result name="success">dutyList.jsp</result>
+		</action>
+
+		<action name="roomList" class="com.jypc.action.RoomAction">
+			<result name="success">roomList.jsp</result>
+		</action>
+
+		<action name="owenrList" class="com.jypc.action.OwenrAction">
+			<result name="success">owenrList.jsp</result>
+		</action>
+
+		<action name="tenementList" class="com.jypc.action.TenementAction">
+			<result name="success">tenementList.jsp</result>
+		</action>
+	</package>
+
+	<package name="login" namespace="/" extends="struts-default">
+		<action name="loginList" class="com.jypc.action.LoginAction">
+			<result name="bbb">/main.jsp</result>
+			<result name="ccc">/login.jsp</result>
+			<result name="ddd">/adminInfo.jsp</result>
+
+		</action>
+	</package>
+</struts>
